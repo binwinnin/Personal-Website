@@ -19,48 +19,8 @@ mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-// ── Contact form → Formspree ──────────────────────────────
-// Replace YOUR_FORM_ID below with the ID from formspree.io/dashboard
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
-
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const btn  = form.querySelector('button[type="submit"]');
-  const orig = btn.textContent;
-
-  btn.textContent = 'Sending…';
-  btn.disabled    = true;
-
-  try {
-    const res = await fetch(FORMSPREE_ENDPOINT, {
-      method:  'POST',
-      headers: { 'Accept': 'application/json' },
-      body:    new FormData(form)
-    });
-
-    if (res.ok) {
-      btn.textContent       = 'Message Sent ✓';
-      btn.style.background  = '#4caf50';
-      btn.style.borderColor = '#4caf50';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent       = orig;
-        btn.style.background  = '';
-        btn.style.borderColor = '';
-        btn.disabled          = false;
-      }, 3500);
-    } else {
-      throw new Error('Server error');
-    }
-  } catch {
-    btn.textContent       = 'Failed — please try again';
-    btn.style.background  = '#e63935';
-    btn.style.borderColor = '#e63935';
-    btn.disabled          = false;
-    setTimeout(() => { btn.textContent = orig; }, 3000);
-  }
-});
+// ── Contact form → Formspree (via @formspree/ajax CDN) ───
+// Initialisation is handled by the inline script in index.html;
 
 // ── Scroll reveal ─────────────────────────────────────────
 const revealEls = document.querySelectorAll(
