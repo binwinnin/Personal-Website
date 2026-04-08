@@ -11,8 +11,8 @@
 :root {
   --background: #ffffff;
   --foreground: #212529;
-  --red:        #e63935;
-  --red-dark:   #c62828;
+  --red:        #1d6fd8;
+  --red-dark:   #1558b0;
   --dark:       #1a1a1a;
   --dark-2:     #242424;
   --grey:       #444245;
@@ -252,9 +252,9 @@ h1,h2,h3,h4,h5,h6 {
   background: #fff; border: 1px solid var(--border); border-radius: 10px;
   padding: 36px 28px; transition: all var(--trans);
 }
-.service-card:hover { border-color: var(--red); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(230,57,53,0.1); }
+.service-card:hover { border-color: var(--red); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(29,111,216,0.1); }
 .service-icon {
-  width: 52px; height: 52px; background: rgba(230,57,53,0.08); border-radius: 10px;
+  width: 52px; height: 52px; background: rgba(29,111,216,0.08); border-radius: 10px;
   display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
 }
 .service-icon svg { width: 26px; height: 26px; color: var(--red); }
@@ -334,7 +334,7 @@ h1,h2,h3,h4,h5,h6 {
 .form-group input::placeholder, .form-group textarea::placeholder { color: #555; }
 .form-group select option { background: var(--dark-2); }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  border-color: var(--red); box-shadow: 0 0 0 3px rgba(230,57,53,0.15);
+  border-color: var(--red); box-shadow: 0 0 0 3px rgba(29,111,216,0.15);
 }
 .form-group textarea { resize: vertical; min-height: 130px; }
 .form-note { text-align: center; font-size: 13px; color: #555; margin-top: 14px; }
@@ -406,10 +406,10 @@ h1,h2,h3,h4,h5,h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(230,57,53,0.45);
+  box-shadow: 0 4px 20px rgba(29,111,216,0.45);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.chat-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(230,57,53,0.55); }
+.chat-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(29,111,216,0.55); }
 
 .chat-window {
   position: fixed;
@@ -519,7 +519,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Hind', sans-serif;
   transition: border-color 0.2s;
 }
-.chat-input:focus { border-color: rgba(230,57,53,0.5); }
+.chat-input:focus { border-color: rgba(29,111,216,0.5); }
 .chat-input::placeholder { color: rgba(255,255,255,0.3); }
 .chat-input:disabled { opacity: 0.4; }
 .chat-send-btn {
