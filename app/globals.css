@@ -116,11 +116,11 @@ h1,h2,h3,h4,h5,h6 {
   white-space: nowrap;
 }
 .btn-red          { background: var(--red); color: #fff; border-color: var(--red); }
-.btn-red:hover    { background: var(--red-dark); border-color: var(--red-dark); }
+.btn-red:hover    { background: var(--red-dark); border-color: var(--red-dark); box-shadow: 0 0 18px rgba(29,111,216,0.55); }
 .btn-outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
-.btn-outline-white:hover { background: #fff; color: var(--dark); border-color: #fff; }
+.btn-outline-white:hover { background: #fff; color: var(--dark); border-color: #fff; box-shadow: 0 0 18px rgba(255,255,255,0.3); }
 .btn-outline-dark  { background: transparent; color: var(--dark); border-color: var(--dark); }
-.btn-outline-dark:hover { background: var(--dark); color: #fff; }
+.btn-outline-dark:hover { background: var(--dark); color: #fff; box-shadow: 0 0 18px rgba(26,26,26,0.45); }
 .btn-lg   { padding: 16px 40px; font-size: 16px; }
 .btn-full { width: 100%; }
 
