@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react'
 import { ShaderAnimation } from '@/components/ui/shader-animation'
 import { Chatbot } from '@/components/ui/chatbot'
+import { Button } from '@/components/ui/flow-hover-button'
 
 const FORMSPREE = 'https://formspree.io/f/mpqoneng'
 
@@ -87,7 +88,6 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero" id="home">
-        {/* Shader background */}
         <div className="hero-shader-bg">
           <ShaderAnimation />
         </div>
@@ -98,8 +98,8 @@ export default function Home() {
             <h1>We Build Custom Websites That <span className="red">Grow Your Business</span></h1>
             <p className="hero-desc">From stunning designs to blazing-fast performance — we deliver websites that convert visitors into customers. No templates, no shortcuts.</p>
             <div className="hero-btns">
-              <a href="#pricing" className="btn btn-red">View Packages</a>
-              <a href="#contact" className="btn btn-outline-white">Get a Free Quote</a>
+              <Button href="#pricing" variant="primary">View Packages</Button>
+              <Button href="#contact" variant="outline-white">Get a Free Quote</Button>
             </div>
           </div>
           <div className="hero-right">
@@ -216,7 +216,7 @@ export default function Home() {
                 <li><span className="nope">✗</span> CMS / blog</li>
                 <li><span className="nope">✗</span> AI chatbot</li>
               </ul>
-              <a href="#contact" className="btn btn-outline-dark btn-full">Get Started</a>
+              <Button href="#contact" variant="outline-dark" full>Get Started</Button>
             </div>
 
             <div className="pricing-card featured">
@@ -236,7 +236,7 @@ export default function Home() {
                 <li><span className="chk">✓</span> CMS / blog</li>
                 <li><span className="nope">✗</span> AI chatbot</li>
               </ul>
-              <a href="#contact" className="btn btn-red btn-full">Get Started</a>
+              <Button href="#contact" variant="primary" full>Get Started</Button>
             </div>
 
             <div className="pricing-card">
@@ -255,7 +255,7 @@ export default function Home() {
                 <li><span className="chk">✓</span> CMS / blog</li>
                 <li><span className="chk chk-gold">✓</span> <strong>AI chatbot included</strong></li>
               </ul>
-              <a href="#contact" className="btn btn-outline-dark btn-full">Get Started</a>
+              <Button href="#contact" variant="outline-dark" full>Get Started</Button>
             </div>
           </div>
           <p className="pricing-note">Need something bespoke? <a href="#contact">Let&apos;s talk</a> — we build custom solutions too.</p>
@@ -269,7 +269,7 @@ export default function Home() {
             <h4>Ready to Build Something Remarkable?</h4>
             <p>Let&apos;s turn your vision into a website that works as hard as you do.</p>
           </div>
-          <a href="#contact" className="btn btn-red btn-lg">Start Your Project</a>
+          <Button href="#contact" variant="cta" lg>Start Your Project</Button>
         </div>
       </section>
 
@@ -314,7 +314,7 @@ export default function Home() {
               <label>Tell Us About Your Project</label>
               <textarea name="message" rows={5} placeholder="What are you looking to build? What's your budget and timeline?" required />
             </div>
-            <button type="submit" className="btn btn-red btn-full btn-lg">Send Message</button>
+            <Button type="submit" variant="primary" full lg>Send Message</Button>
             <p className="form-note">We reply to every message within 24 hours.</p>
           </form>
         </div>
