@@ -216,7 +216,7 @@ export default function Home() {
                 <li><span className="nope">✗</span> CMS / blog</li>
                 <li><span className="nope">✗</span> AI chatbot</li>
               </ul>
-              <a href="#contact" className="btn btn-outline-dark btn-full">Get Started</a>
+              <a href="#contact" className="btn btn-red btn-full">Get Started</a>
             </div>
 
             <div className="pricing-card featured">
@@ -255,7 +255,7 @@ export default function Home() {
                 <li><span className="chk">✓</span> CMS / blog</li>
                 <li><span className="chk chk-gold">✓</span> <strong>AI chatbot included</strong></li>
               </ul>
-              <a href="#contact" className="btn btn-outline-dark btn-full">Get Started</a>
+              <a href="#contact" className="btn btn-red btn-full">Get Started</a>
             </div>
           </div>
           <p className="pricing-note">Need something bespoke? <a href="#contact">Let&apos;s talk</a> — we build custom solutions too.</p>
