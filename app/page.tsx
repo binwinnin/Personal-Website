@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { ShaderAnimation } from '@/components/ui/shader-animation'
 import { Chatbot } from '@/components/ui/chatbot'
 
-const FORMSPREE = 'https://formspree.io/f/mpqoneng'
+const FORMSPREE = 'https://formspree.io/f/xaqlkkzk'
 
 export default function Home() {
   const navRef = useRef<HTMLElement>(null)
@@ -40,11 +40,9 @@ export default function Home() {
           btn.style.borderColor = ''
           btn.disabled = false
         }, 3500)
-      } else throw new Error()
+      }
     } catch {
-      btn.textContent = 'Failed — please try again'
       btn.disabled = false
-      setTimeout(() => { btn.textContent = orig }, 3000)
     }
   }
 

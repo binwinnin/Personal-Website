@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 
-const CHAT_TRANSCRIPT_FORM_ID = "YOUR_CHAT_FORM_ID"
+const CHAT_TRANSCRIPT_FORM_ID = "mpqoneng"
 
 type Message = { role: "user" | "assistant"; content: string }
 
