@@ -19,7 +19,7 @@ export function Gallery4({ description, items }: Gallery4Props) {
     <section className="section bg-dark" id="clients">
       <div className="container">
         <div className="services-head-box light" style={{paddingBottom:'48px'}}>
-          <span className="section-tag">Our Work</span>
+          <span className="section-tag" style={{fontSize:'16px'}}>Street Cred</span>
           {description && <p className="section-desc light">{description}</p>}
         </div>
         <div className="clients-grid" style={{display:'grid', gridTemplateColumns:'repeat(2, 1fr)', gap:'24px'}}>
