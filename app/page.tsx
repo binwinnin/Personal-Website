@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react'
 import { ShaderAnimation } from '@/components/ui/shader-animation'
+import { Gallery4 } from '@/components/ui/gallery4'
 
 
 const FORMSPREE = 'https://formspree.io/f/xaqlkkzk'
@@ -250,6 +251,28 @@ export default function Home() {
           <p className="pricing-note">Need something bespoke? <a href="#contact">Let&apos;s talk</a> — we build custom solutions too.</p>
         </div>
       </section>
+
+      {/* CLIENTS */}
+      <Gallery4
+        title="Clients"
+        description="A selection of websites I've designed and built for local businesses."
+        items={[
+          {
+            id: "dan-malones-electrical",
+            title: "Dan Malone's Electrical Services",
+            description: "A professional residential electrician serving South Hadley, MA and the Pioneer Valley.",
+            href: "https://danmaloneselectricalservices.com/",
+            image: "/clients/dan-malones.png",
+          },
+          {
+            id: "a-thousand-hills-farm",
+            title: "A Thousand Hills Farm",
+            description: "A local New Hampshire veteran and family owned farm offering raw milk, pastured eggs, and more.",
+            href: "https://athousandhillsfarmnh.com/",
+            image: "/clients/thousand-hills.png",
+          },
+        ]}
+      />
 
       {/* CTA BAND */}
       <section className="cta-band">
