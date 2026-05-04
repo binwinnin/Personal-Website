@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react'
 import { ShaderAnimation } from '@/components/ui/shader-animation'
-import { Chatbot } from '@/components/ui/chatbot'
+
 
 const FORMSPREE = 'https://formspree.io/f/xaqlkkzk'
 
@@ -335,7 +335,6 @@ export default function Home() {
           <p>&copy; {new Date().getFullYear()} Lakes Region Web Co. All rights reserved.</p>
         </div>
       </footer>
-      <Chatbot />
     </>
   )
 }
