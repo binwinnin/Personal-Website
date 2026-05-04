@@ -255,7 +255,7 @@ export default function Home() {
       {/* CLIENTS */}
       <Gallery4
         title="Clients"
-        description="A selection of websites I've designed and built for local businesses."
+        description="A selection of websites we've designed and built for local businesses."
         items={[
           {
             id: "dan-malones-electrical",
