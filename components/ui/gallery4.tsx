@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 interface GalleryItem {
@@ -37,12 +36,12 @@ export function Gallery4({ title, description, items }: Gallery4Props) {
                     rel="noopener noreferrer"
                     className="block group rounded-xl overflow-hidden border border-[var(--border)] bg-white transition-all duration-300 hover:border-[var(--red)] hover:shadow-lg hover:-translate-y-1"
                   >
-                    <div className="relative w-full aspect-[16/9] overflow-hidden bg-[var(--bg-light)]">
-                      <Image
+                    <div style={{width:'100%', aspectRatio:'16/9', overflow:'hidden', background:'var(--bg-light)'}}>
+                      <img
                         src={item.image}
                         alt={item.title}
-                        fill
-                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        style={{width:'100%', height:'100%', objectFit:'cover', objectPosition:'top', transition:'transform 0.5s ease', display:'block'}}
+                        className="group-hover:scale-105"
                       />
                     </div>
                     <div className="p-6">
