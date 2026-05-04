@@ -205,14 +205,11 @@ export default function Home() {
                 <p className="pkg-tagline">Get online fast with a professional site that makes a strong first impression.</p>
               </div>
               <ul className="pkg-features">
-                <li><span className="chk">✓</span> Up to 5 pages</li>
                 <li><span className="chk">✓</span> Mobile responsive</li>
                 <li><span className="chk">✓</span> Contact form</li>
                 <li><span className="chk">✓</span> Basic SEO setup</li>
                 <li><span className="chk">✓</span> 1 revision round</li>
                 <li><span className="nope">✗</span> Custom animations</li>
-                <li><span className="nope">✗</span> CMS / blog</li>
-                <li><span className="nope">✗</span> AI chatbot</li>
               </ul>
               <a href="#contact" className="btn btn-red btn-full">Get Started</a>
             </div>
@@ -225,14 +222,11 @@ export default function Home() {
                 <p className="pkg-tagline">For growing businesses ready to stand out and capture more leads online.</p>
               </div>
               <ul className="pkg-features">
-                <li><span className="chk">✓</span> Up to 10 pages</li>
                 <li><span className="chk">✓</span> Mobile responsive</li>
                 <li><span className="chk">✓</span> Contact + lead forms</li>
                 <li><span className="chk">✓</span> Full SEO setup</li>
                 <li><span className="chk">✓</span> 3 revision rounds</li>
                 <li><span className="chk">✓</span> Custom animations</li>
-                <li><span className="chk">✓</span> CMS / blog</li>
-                <li><span className="nope">✗</span> AI chatbot</li>
               </ul>
               <a href="#contact" className="btn btn-red btn-full">Get Started</a>
             </div>
@@ -240,20 +234,17 @@ export default function Home() {
             <div className="pricing-card">
               <div className="pricing-top">
                 <p className="pkg-label">Business Pro</p>
-                <div className="pkg-price"><span className="currency">$</span><span className="amount">749</span></div>
-                <p className="pkg-tagline">The complete package — unlimited pages, AI chatbot, and priority support.</p>
+                <div className="pkg-price"><span className="amount" style={{fontSize:'42px',paddingTop:'8px'}}>Custom</span></div>
+                <p className="pkg-tagline">Contact us for a custom quote tailored to your project&apos;s needs.</p>
               </div>
               <ul className="pkg-features">
-                <li><span className="chk">✓</span> Unlimited pages</li>
                 <li><span className="chk">✓</span> Mobile responsive</li>
                 <li><span className="chk">✓</span> Advanced forms &amp; automation</li>
                 <li><span className="chk">✓</span> Advanced SEO + analytics</li>
                 <li><span className="chk">✓</span> Unlimited revisions</li>
                 <li><span className="chk">✓</span> Custom animations</li>
-                <li><span className="chk">✓</span> CMS / blog</li>
-                <li><span className="chk chk-gold">✓</span> <strong>AI chatbot included</strong></li>
               </ul>
-              <a href="#contact" className="btn btn-red btn-full">Get Started</a>
+              <a href="#contact" className="btn btn-red btn-full">Contact for Pricing</a>
             </div>
           </div>
           <p className="pricing-note">Need something bespoke? <a href="#contact">Let&apos;s talk</a> — we build custom solutions too.</p>
