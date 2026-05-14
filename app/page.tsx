@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react'
 import { ShaderAnimation } from '@/components/ui/shader-animation'
 import { Gallery4 } from '@/components/ui/gallery4'
+import ParallaxBackground from '@/components/ui/mouse-responsive-background'
 
 
 const FORMSPREE = 'https://formspree.io/f/xaqlkkzk'
@@ -191,12 +192,16 @@ export default function Home() {
       </section>
 
       {/* PRICING */}
-      <section className="section bg-light" id="pricing">
-        <div className="container">
-          <div className="services-head-box">
+      <section className="section" id="pricing" style={{padding:0}}>
+      <ParallaxBackground
+          imageUrl="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=2940&auto=format&fit=crop"
+          overlay="rgba(10,10,20,0.82)"
+        >
+        <div className="container" style={{padding:'100px 30px'}}>
+          <div className="services-head-box light">
             <span className="section-tag">Choose Your Package</span>
-            <h4>Straightforward Pricing. No Hidden Fees.</h4>
-            <p className="section-desc">Every package includes a strategy call, design mockup, revision rounds, and post-launch support.</p>
+            <h4 className="light">Straightforward Pricing. No Hidden Fees.</h4>
+            <p className="section-desc light">Every package includes a strategy call, design mockup, revision rounds, and post-launch support.</p>
           </div>
           <div className="pricing-grid">
             <div className="pricing-card">
@@ -248,8 +253,9 @@ export default function Home() {
               <a href="#contact" className="btn btn-red btn-full">Contact for Pricing</a>
             </div>
           </div>
-          <p className="pricing-note">Need something bespoke? <a href="#contact">Let&apos;s talk</a> — we build custom solutions too.</p>
+          <p className="pricing-note" style={{color:'rgba(255,255,255,0.5)'}}>Need something bespoke? <a href="#contact" style={{color:'var(--red)'}}>Let&apos;s talk</a> — we build custom solutions too.</p>
         </div>
+        </ParallaxBackground>
       </section>
 
       {/* CLIENTS */}

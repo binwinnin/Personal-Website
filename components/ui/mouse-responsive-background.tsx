@@ -2,7 +2,17 @@
 
 import React, { useEffect, useRef } from 'react'
 
-const ParallaxBackground = () => {
+interface ParallaxBackgroundProps {
+  imageUrl?: string
+  children?: React.ReactNode
+  overlay?: string
+}
+
+const ParallaxBackground = ({
+  imageUrl = 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=2940&auto=format&fit=crop',
+  children,
+  overlay = 'rgba(0,0,0,0.72)',
+}: ParallaxBackgroundProps) => {
   const bgRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -22,15 +32,27 @@ const ParallaxBackground = () => {
   }, [])
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div style={{ position: 'relative', overflow: 'hidden' }}>
       <div
         ref={bgRef}
-        className="absolute top-0 left-0 w-[110%] h-[110%] bg-center bg-cover"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1537884944318-390069bb8665?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+          position: 'absolute',
+          top: '-5%',
+          left: '-5%',
+          width: '110%',
+          height: '110%',
+          backgroundImage: `url('${imageUrl}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           transform: 'translate3d(0, 0, 0)',
+          transition: 'transform 0.05s linear',
+          zIndex: 0,
         }}
       />
+      <div style={{ position: 'absolute', inset: 0, background: overlay, zIndex: 1 }} />
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        {children}
+      </div>
     </div>
   )
 }
