@@ -29,8 +29,8 @@ export function Gallery4({ description, items }: Gallery4Props) {
           const el = entry.target as HTMLElement
           setTimeout(() => {
             el.style.opacity = '1'
-            el.style.transform = 'translateY(0)'
-          }, i * 120)
+            el.style.transform = 'translateY(0) scale(1)'
+          }, i * 150)
           obs.unobserve(el)
         }
       })
@@ -62,9 +62,9 @@ export function Gallery4({ description, items }: Gallery4Props) {
                 borderRadius: '10px',
                 overflow: 'hidden',
                 textDecoration: 'none',
-                opacity: '0.25',
-                transform: 'translateY(48px)',
-                transition: 'opacity 0.65s ease, transform 0.65s ease, border-color 0.3s ease, box-shadow 0.3s ease',
+                opacity: '0',
+                transform: 'translateY(80px) scale(0.96)',
+                transition: 'opacity 0.85s cubic-bezier(0.22,1,0.36,1), transform 0.85s cubic-bezier(0.22,1,0.36,1), border-color 0.3s ease, box-shadow 0.3s ease',
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget

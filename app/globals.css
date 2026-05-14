@@ -361,8 +361,8 @@ h1,h2,h3,h4,h5,h6 {
 .footer-bottom { border-top: 1px solid #1e1e1e; text-align: center; padding: 20px 30px; font-size: 13px; color: #444; }
 
 /* ── REVEAL ─────────────────────────────────────────── */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal { opacity: 0; transform: translateY(60px) scale(0.97); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0) scale(1); }
 
 /* ── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 1024px) {
