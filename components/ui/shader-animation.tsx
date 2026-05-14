@@ -85,7 +85,7 @@ export function ShaderAnimation() {
       targetMouse.x = ((e.clientX - rect.left) / rect.width * 2.0 - 1.0) * aspect
       targetMouse.y = -((e.clientY - rect.top) / rect.height * 2.0 - 1.0) * aspectY
     }
-    container.addEventListener("mousemove", onMouseMove)
+    window.addEventListener("mousemove", onMouseMove)
 
     sceneRef.current = { camera, scene, renderer, uniforms, animationId: 0 }
 
@@ -94,8 +94,8 @@ export function ShaderAnimation() {
       uniforms.time.value += 0.05
 
       // Smooth lerp toward cursor
-      currentMouse.x += (targetMouse.x - currentMouse.x) * 0.04
-      currentMouse.y += (targetMouse.y - currentMouse.y) * 0.04
+      currentMouse.x += (targetMouse.x - currentMouse.x) * 0.08
+      currentMouse.y += (targetMouse.y - currentMouse.y) * 0.08
       uniforms.mouse.value.set(currentMouse.x, currentMouse.y)
 
       renderer.render(scene, camera)
@@ -105,7 +105,7 @@ export function ShaderAnimation() {
 
     return () => {
       window.removeEventListener("resize", onResize)
-      container.removeEventListener("mousemove", onMouseMove)
+      window.removeEventListener("mousemove", onMouseMove)
       if (sceneRef.current) {
         cancelAnimationFrame(sceneRef.current.animationId)
         if (container.contains(sceneRef.current.renderer.domElement)) {
