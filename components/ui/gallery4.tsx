@@ -1,5 +1,7 @@
 "use client"
 
+import { useEffect, useRef } from "react"
+
 interface GalleryItem {
   id: string
   title: string
@@ -15,6 +17,29 @@ interface Gallery4Props {
 }
 
 export function Gallery4({ description, items }: Gallery4Props) {
+  const cardsRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const cards = cardsRef.current?.querySelectorAll<HTMLElement>('.client-card')
+    if (!cards) return
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement
+          setTimeout(() => {
+            el.style.opacity = '1'
+            el.style.transform = 'translateY(0)'
+          }, i * 120)
+          obs.unobserve(el)
+        }
+      })
+    }, { threshold: 0.15 })
+
+    cards.forEach(card => obs.observe(card))
+    return () => obs.disconnect()
+  }, [])
+
   return (
     <section className="section bg-dark" id="clients">
       <div className="container">
@@ -22,13 +47,14 @@ export function Gallery4({ description, items }: Gallery4Props) {
           <span className="section-tag" style={{fontSize:'28px'}}>Street Cred</span>
           {description && <p className="section-desc light">{description}</p>}
         </div>
-        <div className="clients-grid" style={{display:'grid', gridTemplateColumns:'repeat(2, 1fr)', gap:'24px'}}>
+        <div ref={cardsRef} className="clients-grid" style={{display:'grid', gridTemplateColumns:'repeat(2, 1fr)', gap:'24px'}}>
           {items.map((item) => (
             <a
               key={item.id}
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
+              className="client-card"
               style={{
                 display: 'block',
                 background: 'var(--dark)',
@@ -36,7 +62,9 @@ export function Gallery4({ description, items }: Gallery4Props) {
                 borderRadius: '10px',
                 overflow: 'hidden',
                 textDecoration: 'none',
-                transition: 'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
+                opacity: '0.25',
+                transform: 'translateY(48px)',
+                transition: 'opacity 0.65s ease, transform 0.65s ease, border-color 0.3s ease, box-shadow 0.3s ease',
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget
