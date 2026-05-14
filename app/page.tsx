@@ -195,7 +195,7 @@ export default function Home() {
       <section className="section" id="pricing" style={{padding:0}}>
       <ParallaxBackground
           imageUrl="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=2940&auto=format&fit=crop"
-          overlay="rgba(10,10,20,0.82)"
+          overlay="rgba(10,10,20,0.55)"
         >
         <div className="container" style={{padding:'100px 30px'}}>
           <div className="services-head-box light">
